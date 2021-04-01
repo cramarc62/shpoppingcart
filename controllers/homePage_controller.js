@@ -5,6 +5,7 @@ exports.getHomePage=(req,res,next)=>{
 }
 exports.getItems=async (req,res,next)=>{
     try {
+        console.log(req.body)
         const items=await Items.find();
         //console.log(items)
         //console.log(res.json({data:items}))
@@ -17,13 +18,13 @@ exports.getItems=async (req,res,next)=>{
 }
 exports.addItem=async (req,res,next)=>{
     try{
-        //console.log(req.body.item_name)
+        console.log(req.body)
         let item=new Items({
             item_name:req.body.item_name
         })
-        
+        console.log("inside 1add iyem")
         await item.save();
-        //console.log("inside add iyem")
+        console.log("inside add iyem")
         //console.log(item)
         res.send({
             data:item
@@ -31,7 +32,7 @@ exports.addItem=async (req,res,next)=>{
 
     }
     catch(error){
-
+        console.log(error)
     }
 }
 exports.deleteItem=async (req,res,next)=>{
