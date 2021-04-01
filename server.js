@@ -2,7 +2,7 @@ const path= require('path')
 const mongoose=require('mongoose')
 const express= require('express');
 
-const connectDB=require('./db')
+//const connectDB=require('./db')
 //connectDB();
 //const MongoClient = require('mongodb').MongoClient;
 //const uri = "mongodb+srv://arif:arif1234@cluster0.00slz.mongodb.net/shoppingCartDB?retryWrites=true&w=majority";
