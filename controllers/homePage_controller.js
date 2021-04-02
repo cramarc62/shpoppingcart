@@ -1,4 +1,4 @@
-const Items= require('../models/Items') 
+const Items= require('../Models/Items') 
 
 exports.getHomePage=(req,res,next)=>{
     res.send('homepage controller')
